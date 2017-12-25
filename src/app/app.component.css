@@ -1,0 +1,9 @@
+.all {
+  min-width: 750px;
+  min-height: 600px;
+}
+.panquan{
+  bottom: 10px;
+  position: absolute;
+  left: 50%;
+}

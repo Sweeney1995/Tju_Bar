@@ -1,0 +1,162 @@
+.person1{
+  border:3px solid slategray;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 500px;
+  top: 300px;
+  border-radius: 3px;
+
+}
+.person2{
+  position: absolute;
+  left: 800px;
+  top: 360px;
+  font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
+  font-size: 18px;
+  color: deepskyblue;
+}
+.person3{
+  position:absolute;
+  bottom:0px;
+  padding:0px;
+  margin:0px;
+  right:0;
+}
+.person4 {
+
+  position: relative;
+  display: inline-block;
+  font-family: STHeiti, "Microsoft Yahei", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 18px;
+  color: #005097;
+}
+
+.person5{
+  position: absolute;
+  top: 710px;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 920px;
+  height: 1000px;
+  border: 1px solid lightslategrey;
+
+
+}
+.person6{
+  position: relative;
+  top: 650px;
+  left: 500px;
+  width: 920px;
+  height: 150px;
+  font-family: STHeiti, "Microsoft Yahei", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 18px;
+  color: #005097;
+}
+.person7{
+
+  left: 800px;
+  top: 300px;
+  font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
+  font-size: 18px;
+
+  background: #222 url(../assets/img/td.jpg) repeat-x;
+  display: inline-block;
+  padding: 5px 10px 6px;
+
+  text-decoration: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  position: absolute;
+  cursor: pointer
+}
+.img2{
+  position:absolute;
+  height:100px;
+  width:120px;
+  left:500px;
+  top:70px;
+  cursor: pointer;
+}
+div h1.body input {
+  width: 400px;
+  height: 40px;
+  top:95px;
+  border: 1px solid blue;
+  position:absolute;
+
+  left:650px;
+
+}
+.button{
+  display: inline-block;
+  /*padding: 23px 63px;*/
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #7b77c9;
+  color: white;
+  float:right;
+  font-family: "Microsoft Yahei" ;
+  font-size: 18px;
+  line-height:25px;
+  letter-spacing:1px;
+  border-radius: 5px;
+  position: absolute;
+  top: 93px;
+  width: 150px;
+  height: 40px;
+  left: 1100px;
+  cursor: pointer;
+
+}
+.button2{
+  position:absolute;
+
+  padding:0px;
+  margin:0px;
+  right:0;
+}
+.person8{
+  position: absolute;
+  top: 550px;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 920px;
+  height: 1000px;
+}
+.badge{
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: deepskyblue;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+
+  border-radius: 4px 0 0 4px;
+  margin: 0 15px 0 0 ;
+}
+.person9{
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: 15px 20px 0 -6px;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  list-style: none;
+  top: 10px;
+}
+.person10{
+
+  float: right;
+}

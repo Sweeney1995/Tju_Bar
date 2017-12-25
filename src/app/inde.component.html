@@ -1,0 +1,77 @@
+ <nav style="position:absolute;right:5%; top:10px;">
+   <ul>
+     <li (click)="go()">{{infom.userName}}</li>
+     <li *ngIf="infom.userName!='游客'" (click)="goInfog()">修改信息</li>
+     <li (click)="goLogin()">{{bian}}</li>
+   </ul>
+ </nav><label>{{ id }}</label>
+  <div id="searchinput" >
+    <img id="logo" src="../assets/tjulog.jpg" alt="timg2" class="img">
+    <input type="text" name="email" />
+    <button (click)="show()" type="submit" >全吧搜索</button>
+  </div>
+  <div id="div1" style="position:absolute;left:20%; top:200px; ">
+    <div id="div2">
+      <div class="box" style="background:url(../assets/img/xuexi.jpg); height:240px; width:240px;">
+        <div class="footer">
+          <div class="span1" (click)="goToTest()">学习</div>
+        </div>
+      </div>
+
+      <div class="box" style="background:url(../assets/img/yd.jpg); height:240px; width:240px;">
+        <div class="footer">
+          <div class="span1"  >运动</div>
+        </div>
+      </div>
+
+      <div class="box" style="background:url(../assets/img/yy.jpg); height:240px; width:240px;">
+        <div class="footer">
+          <div class="span1">音乐</div>
+      </div>
+      </div>
+      <div class="box" >
+        <div class="footer">
+          <div class="span1">影视</div>
+        </div>
+      </div>
+
+      <div class="box" >
+        <div class="footer">
+          <div class="span1">游戏</div>
+        </div>
+      </div>
+
+      <div class="box" >
+        <div class="footer">
+          <div class="span1">交往</div>
+        </div>
+      </div>
+
+      <div class="box" >
+        <div class="footer">
+          <div class="span1">明星</div>
+        </div>
+      </div>
+
+      <div class="box" >
+        <div class="footer">
+          <div class="span1">旅游</div>
+        </div>
+      </div>
+    </div>
+    <div class="span3" >
+      <label class="span4"> 体育吧</label>
+      <nav class="span5">
+        <a>
+          埃里克-戈登谈第四节爆发砍17分：我手感火热
+        </a><!--<router-outlet></router-outlet>-->
+      </nav>
+      <p >
+        12月19日讯 火箭今日以120-99战胜了爵士，拿到了14连胜，赛后火箭的埃里克-戈登接受了媒体的采访。
+      </p>
+      <label class="span6">——发帖人：侯佳旺  今天16:30</label>
+    </div>
+  </div>
+
+
+

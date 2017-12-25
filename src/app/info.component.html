@@ -1,0 +1,46 @@
+
+<div >
+  <h1 class="body">
+    <input type="text" name="email" />
+    <img src="../assets/timg2.jpeg" alt="timg2" class="img2">
+  </h1>
+  <button (click)="show()" type="submit" class="button">全吧搜索</button>
+</div>
+
+<div class="person1">
+  <img src="../assets/img/touxiang.jpeg" height="200" width="200"/>
+</div>
+<div class="person7">
+  <button>编辑资料</button>
+</div>
+<div class="person2">
+  用户名:<label>Sara</label>
+  <div>
+    吧龄:<label>1.2</label>
+  </div>
+  <div>
+    发帖:<label>1420</label>
+  </div>
+</div>
+
+<div class="person8">
+  <img src="../assets/img/tieba2.jpg" height="111" width="933"/>
+</div>
+
+<div class="person6">
+  <img src="../assets/img/tieba3.jpg" height="42" width="125"/>
+</div>
+
+<div class="person5">
+
+  <div >
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes"
+          [class.selected]="hero === selectedHero"
+          (click)="onSelect(hero)" class="person9">
+        <span class="badge">{{hero.tieba}}</span> {{hero.zhuti}}  <span class="person10">{{hero.shijian}}</span><button>删除</button>
+      </li>
+    </ul>
+  </div>
+
+</div>

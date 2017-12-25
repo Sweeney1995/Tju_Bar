@@ -1,0 +1,146 @@
+
+
+div.container nav ul li{
+  list-style: none;
+  float: left;
+  margin-left: 45px;
+}
+
+nav ul li{
+  text-decoration: none;
+  color: #5e5d5d;
+  font-family: "raleway-regular", arial;
+  font-size: 14px;
+  letter-spacing: .5px;
+
+  transition:all .2s linear;
+  -o-transition:all .2s linear;
+  -moz-transition:all .2s linear;
+  -webkit-transition:all .2s linear;
+  cursor: pointer;
+}
+nav ul li:active{
+  position: relative;
+  top:1px;
+}
+nav ul li:hover {
+  color: #EEEEEE;
+  background-color: #5e5d5d;
+}
+div input{
+  width: 400px;
+  height: 38px;
+  top:95px;
+  border: 1px solid blue;
+}
+#logo{
+  width:120px;
+  height: 100px;
+  vertical-align: middle;
+}
+#searchinput{
+  padding-left: 20%;
+  margin-top:50px;
+}
+button{
+  background: #7b77c9;
+  color: white;
+  font-family: "Microsoft Yahei" ;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  border-width: 0px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+input {
+  font-size:20px;
+  color: #5e5d5d;
+}
+.box {
+  width: 240px;
+  height: 240px;
+  margin: 0 20px 30px 0;
+  float: left;
+  position: relative;
+  background:url(../assets/img/a.jpg); height:240px; width:240px;
+  overflow: hidden;
+  /*position: relative;*/
+}
+#div2{
+  margin-right: -20px;
+}
+
+.footer
+{
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  transition: height 0.5s;
+  font-family: 'Heiti SC', 'Microsoft YaHei';
+  font-size: 14px;
+  color: white;
+}
+
+.footer:hover{
+  transition: height 0.5s;
+  height: 60px;
+  cursor: pointer;
+}
+
+.span1{
+  width: 240px;
+  height: 100%;
+  background: #3c3c3c;
+  opacity: 0.8;
+  float: left;
+  text-align: center;
+}
+.span2{
+  width: 0px;
+  height: 100%;
+  float: left;
+  background: dodgerblue;
+  text-align: center;
+  opacity: 0.8;
+}
+/*asx*/
+.span3{
+  position: inherit;
+  top: 600px;
+  width: 920px;
+  height: 100px;
+  border-top: 2px solid deepskyblue;
+  border-bottom: 2px solid deepskyblue;
+  border-left: 2px solid white ;
+  border-right: 2px solid white;
+}
+
+.span4{
+  display: inline-block;
+  font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
+  font-size: 18px;
+  color: #005097;
+
+}
+
+.span5{
+  font-size: 20px;
+}
+.span6{
+  position:inherit;
+  bottom:1px;
+  padding:0px;
+  margin:0px;
+  right: 0px;
+}
+ul li{
+  display:inline;
+  background:#EEEEEE;
+  padding:10px;
+}

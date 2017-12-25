@@ -1,0 +1,74 @@
+.button{
+  position: relative;
+  top: 40%;
+  left: 40%;
+
+  float: left;
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: normal!important;
+  color: #fff;
+  background: #3e89fa;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.study1{
+  border: 1px solid dodgerblue;
+  height: 300px;
+  width: 100%;
+  resize:none;
+  font-size: 14px;
+  margin-top: 20px;
+
+}
+.study-input{
+  width: 100%;
+  height: 30px;
+  border: 1px solid dodgerblue;
+  /*left: 20%;*/
+  placeholoder:'请填写标题';
+
+}
+.study2{
+  margin-top: 20px ;
+  margin-bottom:20px ;
+
+}
+.study3{
+  float: left;
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: normal!important;
+  color: #fff;
+  background: #3e89fa;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.study4{
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.study5{
+  float: left;
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: normal!important;
+  color: #fff;
+  background: #3e89fa;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  margin-left: 50px;
+}
+#point{
+  cursor: pointer;
+}

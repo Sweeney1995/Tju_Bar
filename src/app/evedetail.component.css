@@ -1,0 +1,130 @@
+.specific-input {
+  width: 400px;
+  height: 40px;
+  top:95px;
+  border: 1px solid blue;
+  position:absolute;
+
+  left:650px;
+
+}
+.specific-button{
+  display: inline-block;
+  /*padding: 23px 63px;*/
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #7b77c9;
+  color: white;
+  float:right;
+  font-family: "Microsoft Yahei" ;
+  font-size: 18px;
+  line-height:25px;
+  letter-spacing:1px;
+  border-radius: 5px;
+  position: absolute;
+  top: 93px;
+  width: 150px;
+  height: 40px;
+  left: 1100px;
+  cursor: pointer;
+
+}
+.specific-img2{
+  position:absolute;
+  height:100px;
+  width:120px;
+  left:500px;
+  top:70px;
+  cursor: pointer;
+}
+.specific1{
+  align:"middle" ;
+  position: relative;
+  top:200px;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: 1px solid beige;
+}
+.specific2{
+  font-size: 20px;
+  margin: 20px 0 20px 0;
+  border-bottom: 1px solid ;
+  padding-bottom:20px ;
+}
+.specific3{
+  margin: 20px 0 20px 0;
+  border-bottom: 1px solid;
+}
+.specific4{
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+.specific5{
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+  padding-bottom:20px ;
+}
+.specific6{
+  position: relative;
+  float: right;
+
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: normal!important;
+  color: #fff;
+  background: #3e89fa;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.study1{
+  border: 1px solid dodgerblue;
+  height: 300px;
+  width: 100%;
+  resize:none;
+  font-size: 14px;
+  margin-top: 20px;
+
+}
+.study3{
+  float: left;
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: normal!important;
+  color: #fff;
+  background: #3e89fa;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.study5{
+  float: left;
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: normal!important;
+  color: #fff;
+  background: #3e89fa;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  margin-left: 50px;
+}
+.response1{
+  margin: 50px 25% 0 25%;
+}
+.response2{
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  color: #2b71d9;
+}

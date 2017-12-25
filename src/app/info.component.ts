@@ -1,0 +1,33 @@
+import {Component, OnInit} from "@angular/core";
+import {MethodService} from "./method.service";
+import {ActivatedRoute, ParamMap, Params} from '@angular/router';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/toPromise';
+
+const HEROES: object[] = [
+  {  tieba: '学习吧' , zhuti: '注会、中级、英语资料',shijian:'3分钟前' },
+  {  tieba: '学习吧' , zhuti: '初学UI设计需要了解的事儿',shijian:'5分钟前' },
+  {  tieba: '学习吧' , zhuti: '明天要考研了',shijian:'6分钟前' },
+  {  tieba: '学习吧' , zhuti: '你不笨，就是懒',shijian:'9分钟前' },
+  {  tieba: '学习吧' , zhuti: '政治资料',shijian:'12分钟前' }
+];
+@Component(
+  {
+    selector:'app-info',
+    templateUrl:'./info.component.html',
+    styleUrls:['./info.component.css']
+  }
+)
+export class InfoComponent implements OnInit {
+  title:string;
+  heroes:object[];
+  constructor(private M:MethodService, private acroute:ActivatedRoute){}
+  go() {
+    this.M.goAddress('/perinfog','sss');
+  }
+  ngOnInit() {
+    this.heroes=HEROES;
+    this.title=sessionStorage.getItem('userName');
+    this.acroute.paramMap.switchMap((param: ParamMap) => this.title = param.get('id')).subscribe();
+  }
+}
