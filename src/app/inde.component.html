@@ -67,7 +67,7 @@
 
    <div >
      <div *ngFor="let post of tieji" class="post" >
-     <label class="posttitle" (click)="goDetailbyId(post.poId)"> {{post.poName}}</label><label>{{ post.poId }}</label>
+     <label class="posttitle" (click)="goDetailbyId(post.poId.toString())"> {{post.poName}}</label><label>{{ post.poId }}</label>
      <p class="postcontent">
      {{post.poThing}}
      </p>

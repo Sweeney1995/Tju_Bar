@@ -35,6 +35,8 @@ export class EvedetailComponent implements OnInit {
     this.title='evedetail';
     this.flag=true;
     this.m.findAllPosting().then(data => { this.tieji = data['postthingList'];});
-    this.aroute.paramMap.switchMap((params: ParamMap) =>  this.getId(params.get('id'))).subscribe();
+    this.aroute.paramMap.switchMap((params: ParamMap) =>  this.m.getPostbyid(+params.get('id')))
+       .subscribe(data => this.onepost=data);
+
   }
 }

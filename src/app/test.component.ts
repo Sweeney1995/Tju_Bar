@@ -18,16 +18,21 @@ export class TestComponent implements OnInit {
   tieThing:string;
   userId: number;
   onSelect() {
+    if(this.flag === false){
+      this.m.addTie(this.tieName,this.tieThing,+sessionStorage.getItem('id')).then(()=> alert("添加成功！"));
+      this.tieName=null;
+      this.tieThing=null;
+    }
     this.flag=!this.flag;
+  }
+  back() {
+    this.flag=true;
   }
   goBack() {
     this.loca.back();
   }
   goDetail() {
     this.rout.navigate(['eve',"test"]);
-  }
-  addTie() {
-    this.m.addTie(this.tieName,this.tieThing,this.userId).then(data => this.re =data);
   }
   ngOnInit(): void {
       this.flag=true;

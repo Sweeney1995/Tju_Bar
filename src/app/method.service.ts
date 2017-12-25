@@ -17,7 +17,7 @@ export class MethodService implements OnInit {
   rrr: string;
   private headers = new HttpHeaders({'Content-Type': 'application/json'});
   getPostbyid(id: number): Promise<Po> {
-    return this.findAllPosting().then(posts => posts['postthingList'].find(onepost => posts['poId'] === id));
+    return this.findAllPosting().then(posts => posts['postthingList'].find(onepost => onepost['poId'] === id));
   }
   goAddress(address:string, id:string) {
     this.routeServe.navigate([address,id]);
@@ -64,7 +64,8 @@ export class MethodService implements OnInit {
     return this.http.get("/post_bar/postthing/findByDate",{params:new HttpParams().set("userId",userId)}).toPromise();
   }
   addDiss(dis:string,disId:number, disUserId:number):Promise<any> {
-    return this.http.post("/post_bar/discuss/addDiscuss",JSON.stringify({disThing:dis,disPostId:disId,disUserId:disUserId }),{headers:this.headers})
+    return this.http
+      .post("/post_bar/discuss/addDiscuss",JSON.stringify({disThing:dis,disPostId:disId,disUserId:disUserId }),{headers:this.headers})
       .toPromise();
   }
   ngOnInit() {

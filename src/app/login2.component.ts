@@ -8,14 +8,12 @@ import {MethodService} from "./method.service";
 @Component({
   selector:"app-log2",
   template:`
-    <div class="im"><img src="../assets/image/tju.jpg" alt="" width="40%" height="30%"/><br></div>
-    <div class="div">
-    <h2>注册用户</h2>
-    <br>
+    <div class="im"><img src="../assets/image/tju.jpg" alt="" width="40%" height="30%"/><br></div><div class="div"><h2>注册用户</h2><br>
     <label>用户名</label><input [(ngModel)]="info['userName']" placeholder="必填"><br>
     <label>密码</label><input #pword type="password" minlength="6" (keyup)="getPassword(pword.value)" placeholder="必填,最少6位"><br>
     <label>确认密码</label><input [(ngModel)]="cpw" type="password" (keyup)="tiShi()" placeholder="确认密码"><br>
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="ok()">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="back()">返回</button></div>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button (click)="ok()">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="back()">返回</button></div>
   `,
   styleUrls: ["./login2.component.css"]
 })

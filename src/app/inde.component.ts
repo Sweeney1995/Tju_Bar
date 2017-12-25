@@ -51,6 +51,9 @@ export class IndeComponent implements OnInit {
   goDetailbyId(poid:string) {
     this.M.goAddress('eve',poid);
   }
+  delePost(poid:string) {
+    this.M.deletePosting(poid);
+  }
   ngOnInit() {
     this.bian="登录";
     this.infom.userName="游客";
