@@ -55,8 +55,12 @@ export class MethodService implements OnInit {
     return this.http.post("/post_bar/postthing/findByKey",JSON.stringify({keyWord:keyWord,userId:userId}),{headers:this.headers})
       .toPromise();
   }
-  byDate(userId:number):Promise<any> {
+  byDate(userId:string):Promise<any> {
     return this.http.get("/post_bar/postthing/findByDate",{params:new HttpParams().set("userId",userId)}).toPromise();
+  }
+  addDiss(dis:string,disId:number, disUserId:number):Promise<any> {
+    return this.http.post("/post_bar/discuss/addDiscuss",JSON.stringify({disThing:dis,disPostId:disId,disUserId:disUserId }),{headers:this.headers})
+      .toPromise();
   }
   ngOnInit() {
   }
