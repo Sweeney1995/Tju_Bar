@@ -4,6 +4,8 @@ import {Router} from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import {Observable} from "rxjs/Observable";
 import {observable} from "rxjs/symbol/observable";
+import {Po} from "./Class/Po";
+import {Tie} from "./Class/Tie";
 
 @Injectable()
 export class MethodService implements OnInit {
@@ -14,6 +16,9 @@ export class MethodService implements OnInit {
   tie: object;
   rrr: string;
   private headers = new HttpHeaders({'Content-Type': 'application/json'});
+  getPostbyid(id: number): Promise<Po> {
+    return this.findAllPosting().then(posts => posts['postthingList'].find(onepost => posts['poId'] === id));
+  }
   goAddress(address:string, id:string) {
     this.routeServe.navigate([address,id]);
   }
