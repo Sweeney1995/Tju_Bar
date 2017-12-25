@@ -43,7 +43,7 @@ export class IndeComponent implements OnInit {
     }
   }
   goInfog() {
-    this.M.routeServe.navigate(['perinfog',this.infom.userName]);
+    this.M.routeServe.navigate(['perinfog']);
   }
   goLogin() {
     this.M.routeServe.navigate(['login']);
