@@ -3,8 +3,9 @@ import {MethodService} from "./method.service";
 import {ActivatedRoute, ParamMap, Params} from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/toPromise';
+import {Tie} from "./Class/Tie";
 
-const HEROES: object[] = [
+const HEROES: Tie[] = [
   {  tieba: '学习吧' , zhuti: '注会、中级、英语资料',shijian:'3分钟前' },
   {  tieba: '学习吧' , zhuti: '初学UI设计需要了解的事儿',shijian:'5分钟前' },
   {  tieba: '学习吧' , zhuti: '明天要考研了',shijian:'6分钟前' },
@@ -20,7 +21,7 @@ const HEROES: object[] = [
 )
 export class InfoComponent implements OnInit {
   title:string;
-  heroes:object[];
+  heroes:Tie[];
   constructor(private M:MethodService, private acroute:ActivatedRoute){}
   go() {
     this.M.goAddress('/perinfog','sss');
@@ -28,6 +29,5 @@ export class InfoComponent implements OnInit {
   ngOnInit() {
     this.heroes=HEROES;
     this.title=sessionStorage.getItem('userName');
-    this.acroute.paramMap.switchMap((param: ParamMap) => this.title = param.get('id')).subscribe();
   }
 }

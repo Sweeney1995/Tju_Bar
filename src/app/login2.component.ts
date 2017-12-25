@@ -48,9 +48,16 @@ export class Login2Component implements OnInit {
     if(this.info['userPassword'] === this.cpw && this.info['userName']!=null && this.info['userPassword'].length > 5) {
       // this.http.post("/post_bar/user/saveUser",this.info).subscribe(data => {this.re = data});
       sessionStorage.setItem('userName',this.info['userName']);
+      sessionStorage.setItem('userPassword',this.cpw);
       this.m.saveUser(this.info['userName'],this.info['userPassword'])
-        .then(data => { if(data===1) {this.route.navigate(["/inde",data]);} else {alert("用户已注册");}});
+        .then(data => { if(data===1) {alert("注册成功"); this.route.navigate(["/inde"]);}})
+        .catch(this.handleError);
     }
+  }
+  private handleError(error: any): Promise<any> {
+    alert("用户已被注册");
+    console.error('An error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
   }
   back() {
     this.loca.back();

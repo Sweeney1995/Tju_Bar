@@ -59,6 +59,7 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="span3" >
       <label class="span4"> 学习吧</label>
       <nav class="span5">
@@ -66,12 +67,19 @@
           埃里克-戈登谈第四节爆发砍17分：我手感火热
         </a><!--<router-outlet></router-outlet>-->
       </nav>
+=======
+    <div *ngFor="let post of tieji" class="" >
+      <label class=""> {{post.poName}}</label>
+>>>>>>> ec2b4aedf18ea454005e5f620273e17092292032
       <p >
-        12月19日讯 火箭今日以120-99战胜了爵士，拿到了14连胜，赛后火箭的埃里克-戈登接受了媒体的采访。
+        {{post.poThing}}
       </p>
-      <label class="span6">——发帖人：侯佳旺  今天16:30</label>
+      <label class="">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate}}</label>
+
     </div>
+
   </div>
+
 
 
 
