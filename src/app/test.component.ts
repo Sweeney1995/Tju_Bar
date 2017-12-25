@@ -34,6 +34,6 @@ export class TestComponent implements OnInit {
   }
   ngOnInit(): void {
       this.flag=true;
-      this.userId=1;
+      this.userId=parseInt(sessionStorage.getItem('id'));
 }
 }
