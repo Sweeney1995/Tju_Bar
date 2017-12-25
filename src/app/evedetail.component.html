@@ -1,30 +1,30 @@
-<button>{{ onepost.poName }}</button>
 <table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" /></table>
 <!--<div class="background">-->
-<div class="specific1" >
+<div class="specific1" onload="ngOnInit()">
   <div>
     <div class="specific4"><strong><font color="#014b88">帖子主题:</font></strong></div>
-    <div class="specific2" >
-      {{ onepost.poName }} <button (click)="onSelect()" class="specific6">评论</button><button class="specific6">删除</button>
+    <div class="specific2">
+      {{ this.onepost.poName }} <button (click)="onSelect()" class="specific6">评论</button>
+      <button class="specific6" *ngIf="flag2" (click)="delePost(this.onepost.poId.toString())">删除</button>
     </div>
-    <div *ngIf="!flag" class="study4">
-      <div class="response2">发表评论</div>
+    <div *ngIf="flag" class="study4">
       <textarea class="study1" [(ngModel)]="this.disThing"></textarea>
-
       <div>
         <button class="study3" (click)="addDis()">发表</button> <button (click)="onSelect()" class="study5">返回</button>
-      </div>
-
+      </div><br><br>
     </div>
     <div class="specific4"><strong><font color="#014b88">帖子内容:</font></strong></div>
     <div class="specific3">
       {{ onepost.poThing }}
     </div>
+
     <div class="specific4"><strong><font color="#014b88">帖子评论:</font></strong></div>
-    <div class="specific5" *ngFor="let i of onepost.discussList">
-      {{ i.disUserName }}:{{i.disThing}}  时间：{{i.disDate|date:'short'}}
-      <button class="specific6">删除</button>
+    <div class="specific5" *ngFor="let i of this.dis" >{{ i.disUserName }}: &nbsp;&nbsp;{{ i.disThing }}&nbsp;&nbsp;时间：{{ i.disDate|date:'short' }}
+      <button *ngIf="flag2" (click)="deleDis(i.disId.toString())">删除</button>
     </div>
+    <!--<div class="specific5" *ngFor="let i of onepost.discussList" >{{ i.disThing }}-->
+      <!--<button class="specific6" *ngIf="sessionStorage.getItem('id')===i.disUserId.toString(10)">删除</button>-->
+    <!--</div>-->
   </div>
 
 </div>

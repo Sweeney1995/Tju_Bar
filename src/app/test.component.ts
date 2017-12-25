@@ -36,6 +36,9 @@ export class TestComponent implements OnInit {
   goDetail() {
     this.rout.navigate(['eve',"test"]);
   }
+  goDetailbyId(poid:string) {
+    this.m.goAddress('eve',poid);
+  }
   ngOnInit(): void {
       this.flag=true;
       this.userId=parseInt(sessionStorage.getItem('id'));

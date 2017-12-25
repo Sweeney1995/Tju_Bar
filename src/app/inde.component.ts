@@ -6,6 +6,7 @@ import 'rxjs/add/operator/switchMap';
 import { Hero} from "./Class/Hero";
 import { Po } from "./Class/Po";
 import {Location} from "@angular/common";
+import {Dis} from "./Class/Dis";
 
 @Component({
   selector: 'app-ind',
@@ -21,6 +22,7 @@ export class IndeComponent implements OnInit {
   bian: string;
   id:any;
   tieji:Po[];
+  dis:Dis;
   constructor( private loac:Location, private M: MethodService, private acRoute:ActivatedRoute) {}
   onkey(value: string) {
     this.rec = value;

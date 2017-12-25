@@ -24,8 +24,8 @@
 <table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" /></table>
 <div *ngIf="flag">
   <div >
-    <div *ngFor="let post of tieji" class="post" >
-      <label class="posttitle" (click)="goDetailbyId(post.poId.toString())"> {{post.poName}}</label>
+    <div *ngFor="let post of tieji" class="post" (click)="goDetailbyId(post.poId.toString())">
+      <label class="posttitle" > {{post.poName}}</label>
       <p class="postcontent">
         {{post.poThing}}
       </p>
@@ -33,11 +33,10 @@
 
     </div>
   </div>
-
-
-  <br><button (click)="onSelect()" class="button"  >发帖</button>
-
+  <br>
+  <button (click)="onSelect()" class="button"  >发帖</button>
 </div>
+
 
 <div *ngIf="!flag" class="study4">
 

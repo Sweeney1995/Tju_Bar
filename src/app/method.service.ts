@@ -68,6 +68,9 @@ export class MethodService implements OnInit {
       .post("/post_bar/discuss/addDiscuss",JSON.stringify({disThing:dis,disPostId:disId,disUserId:disUserId }),{headers:this.headers})
       .toPromise();
   }
+  deleDis(id:string):Promise<any> {
+    return this.http.get("/post_bar/discuss/deleteDiscuss",{params:new HttpParams().set("id",id)}).toPromise();
+  }
   ngOnInit() {
   }
 }
