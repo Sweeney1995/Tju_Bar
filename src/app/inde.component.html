@@ -15,7 +15,7 @@
      <div id="div2">
        <div class="box" style="background:url(../assets/img/xuexi.jpg); height:240px; width:240px;">
          <div class="footer">
-           <div class="span1" (click)="goToTest()">学习</div>
+           <div class="span1" (click)="goStudy()">学习</div>
          </div>
        </div>
 
@@ -67,7 +67,7 @@
 
    <div >
      <div *ngFor="let post of tieji" class="post" >
-     <label class="posttitle"> {{post.poName}}</label>
+     <label class="posttitle" (click)="goDetailbyId(post.poId)"> {{post.poName}}</label><label>{{ post.poId }}</label>
      <p class="postcontent">
      {{post.poThing}}
      </p>

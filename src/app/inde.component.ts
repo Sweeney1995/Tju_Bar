@@ -29,7 +29,7 @@ export class IndeComponent implements OnInit {
     if(this.infom['userName']!="游客")
     this.M.routeTo('info');
   }
-  goToTest() {
+  goStudy() {
     this.M.routeServe.navigate(['/study', 1]);
   }
   goBack() {
@@ -43,10 +43,13 @@ export class IndeComponent implements OnInit {
     }
   }
   goInfog() {
-    this.M.routeServe.navigate(['perinfog']);
+    this.M.routeTo('perinfog');
   }
   goLogin() {
-    this.M.routeServe.navigate(['login']);
+    this.M.routeTo('login');
+  }
+  goDetailbyId(poid:string) {
+    this.M.goAddress('eve',poid);
   }
   ngOnInit() {
     this.bian="登录";
