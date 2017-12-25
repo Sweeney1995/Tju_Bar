@@ -1,32 +1,26 @@
 <button>{{ title }}</button>
-<div >
-  <h1 class="body">
-    <input type="text" name="email" class="specific-input "/>
-    <img src="../assets/timg2.jpeg" alt="timg2" class="specific-img2">
-  </h1>
-  <button (click)="show()" type="submit" class="specific-button">全吧搜索</button>
-</div>
-
+<table align="center">< img src="../assets/img/top.jpg" width="1026" height="121"  border="0" /></table>
 <!--<div class="background">-->
 <div class="specific1" >
   <div *ngIf="flag">
+    <div class="specific4"><strong><font color="#014b88">帖子主题:</font></strong></div>
     <div class="specific2" >
       吧里没人分享雅思姿料？放着我来 <button (click)="onSelect()" class="specific6">评论</button><button class="specific6">删除</button>
     </div>
-
+    <div class="specific4"><strong><font color="#014b88">帖子内容:</font></strong></div>
     <div class="specific3">
       因为自己专业的原因，基本就没碰英语了啊！四级做了三套真题，考570多，六级裸考500出头一点吧（话说因为lz纯裸考，时间没掌握好，还剩5分钟的时候，还有一篇阅读，完型翻译都没做，最后随便填答案的啊！！考完lz直接躲回宿舍的躺床上默默地痛哭去鸟~）今年又考了一次，因为是在准备雅思的同时准备的。后来主要准备雅思，考了7开心死！准备冲冲小分，看看能不能到7.5好像有点跑题，把自己搜刮的姿料发给大家，想要的留个油箱~~~~
     </div>
-    <div class="specific4">评论区</div>
+    <div class="specific4"><strong><font color="#014b88">帖子评论:</font></strong></div>
     <div class="specific5">
       anna12345.love@163.com
       谢谢了。。。。。。
+      <button class="specific6">删除</button>
     </div>
   </div>
 
   <div *ngIf="!flag" class="study4">
     <div class="response2">发表评论</div>
-    <img src="../assets/img/fatie.jpg" height="59" width="898"/>
     <textarea class="study1"></textarea>
 
     <div>
