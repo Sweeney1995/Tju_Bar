@@ -23,7 +23,7 @@
 
 
 <body style="text-align: center; font-family: '宋体'; font-size: 18px;">
-<p><img src="../assets/img/study.jpg" width="1026" height="308" align="middle" border="0" /></p>
+<p><img src="../assets/img/top.jpg" width="1026" height="121" align="middle" border="0" /></p>
 <div *ngIf="flag">
   <hr width="1000" />
   <table width="1000" height="59" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -69,26 +69,23 @@
   </table>
 
   <hr width="1000" />
-  <p><a href="study_page.html" target="_blank">1</a> <a href="study_page1.html">2</a> <a href="nextpage.html">3</a></p>
+  <!--<p><a href="study_page.html" target="_blank">1</a> <a href="study_page1.html">2</a> <a href="nextpage.html">3</a></p>-->
 
-  <button (click)="onSelect()" class="button">发帖</button>
+  <br><button (click)="onSelect()" class="button"  >发帖</button>
 
 </div>
 
 <div *ngIf="!flag" class="study4">
 
-  <img src="../assets/img/fatie2.jpg" height="63" width="934"/>
   <div class="study2">
-    <input placeholder="请填写标题" class="study-input"/>
-    <input [(ngModel)]="tieName" placeholder="标题"><label>{{ tieName}}</label>
-    <input [(ngModel)]="tieThing"><label>{{ re }}</label>
+    <input [(ngModel)]="tieName" placeholder="请填写标题" class="study-input"/>
   </div>
 
-  <img src="../assets/img/fatie.jpg" height="59" width="898"/>
-  <textarea class="study1"></textarea>
+  <textarea [(ngModel)]="tieThing" placeholder="请填写内容" class="study1"></textarea>
 
-  <div>
-    <button class="study3" (click)="onSelect()">发表</button> <button class="study5" (click)="addTie()">返回</button>
+  <div class="study33">
+    <br>
+  <button class="study3" (click)="onSelect()">发表</button>&nbsp;&nbsp;&nbsp; <button class="study5" (click)="addTie()">返回</button>
   </div>
 </div>
 

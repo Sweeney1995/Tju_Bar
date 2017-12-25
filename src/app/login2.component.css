@@ -1,3 +1,33 @@
+.div {
+  top: 20%;
+  left: 60%;
+  right: 10%;
+  position: absolute;
+}
+.t {
+  color: brown;
+}
+h2 {
+  font-style: italic;
+  color: #014b88;
+  position: relative;
+  left: 2em;
+  top: 1em;
+}
+label {
+  display: inline-block;
+  width: 5em;
+  margin: .5em 0;
+  color: #014b88;
+  font-weight: bold;
+}
+
+input {
+  font-size: 1.2em;
+  height: 1.3em;
+  border-style: outset;
+  width: 8em;
+}
 button {
   display: inline-block;
   outline: none;
@@ -6,17 +36,15 @@ button {
   text-decoration: none;
   font: 16px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
   padding: .3em 0.7em .3em;
-  -webkit-border-radius: .5em;
-  -moz-border-radius: .5em;
   border-radius: .5em;
   vertical-align: bottom;
-  font-weight: 500;
-  color: darkslategrey;
+  font-weight: bold;
+  color: gray;
+  border-style: outset;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
-  left: 6em;
-  position: relative;
+  background-color: transparent;
 }
 button:hover {
   text-decoration: none;
@@ -27,33 +55,8 @@ button:active {
   position: relative;
   top: 1px;
 }
-h2 {
-  font-style: italic;
-  color: royalblue;
-  position: relative;
-  left: 3em;
-}
-label {
-  display: inline-block;
-  width: 4em;
-  text-align: right;
-  margin: .5em 0;
-  color: royalblue;
-  font-weight: bold;
-}
-input {
-  border-color: transparent transparent darkslateblue transparent;
-}
-.ti {
-  right: 3em;
-  color: darkgrey;
-  position: inherit;
-}
-.pos {
-  margin-left:30%;
-  margin-top: 10%;
-}
-.h33 {
-  position: relative;
-  left:10%;
+.im {
+  top: 20%;
+  left:20%;
+  position: absolute;
 }
