@@ -59,11 +59,6 @@
         </div>
       </div>
     </div>
-    <ul>
-      <li *ngFor="let i of tieji">
-        <label>{{ i.poName }}</label><label>{{ i.poThing}}</label>
-      </li>
-    </ul>
     <div class="span3" >
       <label class="span4"> 体育吧</label>
       <nav class="span5">
@@ -75,8 +70,15 @@
         12月19日讯 火箭今日以120-99战胜了爵士，拿到了14连胜，赛后火箭的埃里克-戈登接受了媒体的采访。
       </p>
       <label class="span6">——发帖人：侯佳旺  今天16:30</label>
+      <ul>
+        <li *ngFor="let i of tieji" class="person9">
+          <span class="badge">{{ i.poName }}</span>{{ i.poThing}}
+        </li><br>
+      </ul>
     </div>
+
   </div>
+
 
 
 
