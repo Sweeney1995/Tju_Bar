@@ -23,51 +23,17 @@
 
 <table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" /></table>
 <div *ngIf="flag">
-  <hr width="1000" />
-  <table width="1000" height="59" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr (click)="goDetail()" id="point">
-      <th width="250" scope="col">2分钟前</th>
-      <th width="450" scope="col"><a>PS到底该怎么学呢？</a></th>
-      <th width="300" scope="col"><img src="../assets/img/touxiang.png" width="23" height="23" /> <a>小鱼</a></th>
-    </tr>
-  </table>
-  <hr width="1000" />
+  <div >
+    <div *ngFor="let post of tieji" class="post" >
+      <label class="posttitle" (click)="goDetailbyId(post.poId.toString())"> {{post.poName}}</label>
+      <p class="postcontent">
+        {{post.poThing}}
+      </p>
+      <label class="postend">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:'short'}}</label>
 
+    </div>
+  </div>
 
-  <table width="1000" height="64" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <th width="250" scope="col">3分钟前</th>
-      <th width="450" scope="col"><a href="nextpage.html" target="_blank">注会、中级、英语资料</a></th>
-      <th width="300" scope="col"><img src="../assets/img/touxiang.png" alt="" width="23" height="23" /> <a href="user.html" target="_blank">天天</a></th>
-    </tr>
-  </table>
-  <hr width="1000" />
-  <table width="1000" height="64" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <th width="250" scope="col">4分钟前</th>
-      <th width="450" scope="col"><a href="nextpage.html" target="_blank">初学UI设计需要了解的事儿</a></th>
-      <th width="300" scope="col"><img src="../assets/img/touxiang.png" alt="" width="23" height="23" /> <a href="user.html" target="_blank">QAQ</a></th>
-    </tr>
-  </table>
-  <hr width="1000" />
-  <table width="1000" height="64" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <th width="250" scope="col">10分钟前</th>
-      <th width="450" scope="col"><a href="nextpage.html" target="_blank">明天要考研了</a></th>
-      <th width="300" scope="col">   <img src="../assets/img/touxiang.png" alt="" width="23" height="23" /> <a href="user.html" target="_blank">学霸</a></th>
-    </tr>
-  </table>
-  <hr width="1000" />
-  <table width="1000" height="64" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <th width="250" scope="col">15分钟前</th>
-      <th width="450" scope="col"><a href="nextpage.html" target="_blank">你不笨，就是懒</a></th>
-      <th width="300" scope="col"><img src="../assets/img/touxiang.png" alt="" width="23" height="23" /> <a href="user.html" target="_blank">杯子</a></th>
-    </tr>
-  </table>
-
-  <hr width="1000" />
-  <!--<p><a href="study_page.html" target="_blank">1</a> <a href="study_page1.html">2</a> <a href="nextpage.html">3</a></p>-->
 
   <br><button (click)="onSelect()" class="button"  >发帖</button>
 

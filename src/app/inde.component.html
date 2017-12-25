@@ -66,13 +66,10 @@
 
 
    <div >
-     <div *ngFor="let post of tieji" class="post" >
-     <label class="posttitle" (click)="goDetailbyId(post.poId.toString())"> {{post.poName}}</label><label>{{ post.poId }}</label>
-     <p class="postcontent">
-     {{post.poThing}}
-     </p>
+     <div *ngFor="let post of tieji" class="post" (click)="goDetailbyId(post.poId.toString())">
+     <label class="posttitle" > {{post.poName}}</label>
+     <p class="postcontent">{{post.poThing}}</p>
      <label class="postend">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:'short'}}</label>
-
      </div>
    </div>
  </div>

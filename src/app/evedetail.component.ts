@@ -19,17 +19,13 @@ export class EvedetailComponent implements OnInit {
   flag:boolean;
   poId:string;
   tieji:Po[];
-  D: any;
+  disThing:string;
   constructor(private aroute:ActivatedRoute, private m:MethodService) {}
   onSelect() {
     this.flag = !this.flag;
   }
-  getId(id:string):Promise<string> {
-    this.poId=id;
-    return Promise.resolve(id);
-  }
-  getPostById(id:number):Promise<Po> {
-    return Promise.resolve(this.tieji.find(post => post.poId === id));
+  addDis() {
+    this.m.addTie(sessionStorage.getItem('userName'),this.disThing,parseInt(sessionStorage.getItem('id')));
   }
   ngOnInit() {
     this.title='evedetail';

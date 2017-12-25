@@ -3,6 +3,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 import { MethodService} from "./method.service";
+import {Po} from "./Class/Po";
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -17,6 +18,7 @@ export class TestComponent implements OnInit {
   tieName:string;
   tieThing:string;
   userId: number;
+  tieji:Po[];
   onSelect() {
     if(this.flag === false){
       this.m.addTie(this.tieName,this.tieThing,+sessionStorage.getItem('id')).then(()=> alert("添加成功！"));
@@ -37,5 +39,6 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
       this.flag=true;
       this.userId=parseInt(sessionStorage.getItem('id'));
+      this.m.findAllPosting().then(data => { this.tieji = data['postthingList'];});
 }
 }
