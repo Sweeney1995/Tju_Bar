@@ -23,9 +23,6 @@ export class TestComponent implements OnInit {
   goBack() {
     this.loca.back();
   }
-  goto() {
-    this.rout.navigate(["/inde", "okkk"]);
-  }
   goDetail() {
     this.rout.navigate(['eve',"test"]);
   }
@@ -34,6 +31,6 @@ export class TestComponent implements OnInit {
   }
   ngOnInit(): void {
       this.flag=true;
-      this.userId=1;
+      this.userId=parseInt(sessionStorage.getItem('id'));
 }
 }

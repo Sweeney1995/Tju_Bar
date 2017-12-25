@@ -10,20 +10,56 @@
     <input type="text" name="email" />
     <button (click)="show()" type="submit" >全吧搜索</button>
   </div>
-  <div id="div1" style="position:absolute;left:20%; top:200px; ">
-    <div id="div2">
-      <div class="box" style="background:url(../assets/img/xuexi.jpg); height:240px; width:240px;">
-        <div class="footer">
-          <div class="span1" (click)="goToTest()">学习</div>
-        </div>
-      </div>
+ <div class="marginleft">
+   <div id="div1" >
+     <div id="div2">
+       <div class="box" style="background:url(../assets/img/xuexi.jpg); height:240px; width:240px;">
+         <div class="footer">
+           <div class="span1" (click)="goToTest()">学习</div>
+         </div>
+       </div>
 
-      <div class="box" style="background:url(../assets/img/yd.jpg); height:240px; width:240px;">
-        <div class="footer">
-          <div class="span1"  >运动</div>
-        </div>
-      </div>
+       <div class="box" style="background:url(../assets/img/yd.jpg); height:240px; width:240px;">
+         <div class="footer">
+           <div class="span1"  >运动</div>
+         </div>
+       </div>
 
+       <div class="box" style="background:url(../assets/img/yy.jpg); height:240px; width:240px;">
+         <div class="footer">
+           <div class="span1">音乐</div>
+         </div>
+       </div>
+       <div class="box" >
+         <div class="footer">
+           <div class="span1">影视</div>
+         </div>
+       </div>
+
+       <div class="box" >
+         <div class="footer">
+           <div class="span1">游戏</div>
+         </div>
+       </div>
+
+       <div class="box" >
+         <div class="footer">
+           <div class="span1">交往</div>
+         </div>
+       </div>
+
+       <div class="box" >
+         <div class="footer">
+           <div class="span1">明星</div>
+         </div>
+       </div>
+
+       <div class="box" >
+         <div class="footer">
+           <div class="span1">旅游</div>
+         </div>
+       </div>
+     </div>
       <div class="box" style="background:url(../assets/img/yy.jpg); height:240px; width:240px;">
         <div class="footer">
           <div class="span1">音乐</div>
@@ -59,27 +95,19 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    <div class="span3" >
-      <label class="span4"> 学习吧</label>
-      <nav class="span5">
-        <a>
-          埃里克-戈登谈第四节爆发砍17分：我手感火热
-        </a><!--<router-outlet></router-outlet>-->
-      </nav>
-=======
-    <div *ngFor="let post of tieji" class="" >
-      <label class=""> {{post.poName}}</label>
->>>>>>> ec2b4aedf18ea454005e5f620273e17092292032
-      <p >
-        {{post.poThing}}
-      </p>
-      <label class="">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate}}</label>
-
-    </div>
-
-  </div>
 
 
 
+
+   <div >
+     <div *ngFor="let post of tieji" class="post" >
+     <label class="posttitle"> {{post.poName}}</label>
+     <p class="postcontent">
+     {{post.poThing}}
+     </p>
+     <label class="postend">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:'short'}}</label>
+
+     </div>
+   </div>
+ </div>
 
