@@ -4,6 +4,7 @@ import {ActivatedRoute, ParamMap, Params} from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/toPromise';
 import {Tie} from "./Class/Tie";
+import {Po} from "./Class/Po";
 
 const HEROES: Tie[] = [
   {  tieba: '学习吧' , zhuti: '注会、中级、英语资料',shijian:'3分钟前' },
@@ -22,12 +23,14 @@ const HEROES: Tie[] = [
 export class InfoComponent implements OnInit {
   title:string;
   heroes:Tie[];
-  constructor(private M:MethodService, private acroute:ActivatedRoute){}
+  userPosts:Po[];
+  constructor(private m:MethodService, private acroute:ActivatedRoute){}
   go() {
-    this.M.goAddress('/perinfog','sss');
+    this.m.goAddress('/perinfog','sss');
   }
   ngOnInit() {
     this.heroes=HEROES;
     this.title=sessionStorage.getItem('userName');
+    this.m.getUserPosts(+sessionStorage.getItem('id')).then(datas => this.userPosts =datas);
   }
 }

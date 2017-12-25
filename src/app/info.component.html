@@ -35,10 +35,8 @@
 
   <div >
     <ul class="heroes">
-      <li *ngFor="let hero of heroes"
-          [class.selected]="hero === selectedHero"
-          (click)="onSelect(hero)" class="person9">
-        <span class="badge">{{hero.tieba}}</span> {{hero.zhuti}}  <span class="person10">{{hero.shijian}}</span><button>删除</button>
+      <li *ngFor="let post of this.userPosts" class="person9">
+        <span class="badge">{{ post.poName }}</span> {{ post.poThing }}  <span class="person10">{{ post.poDate|date:'short'}}</span><button>删除</button>
       </li>
     </ul>
   </div>

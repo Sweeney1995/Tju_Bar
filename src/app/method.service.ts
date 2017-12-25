@@ -19,6 +19,9 @@ export class MethodService implements OnInit {
   getPostbyid(id: number): Promise<Po> {
     return this.findAllPosting().then(posts => posts['postthingList'].find(onepost => onepost['poId'] === id));
   }
+  getUserPosts(id: number): Promise<Po[]> {
+    return this.findAllPosting().then(re => re['postthingList'].find(posts => posts['poUserId'] === id));
+  }
   goAddress(address:string, id:string) {
     this.routeServe.navigate([address,id]);
   }
@@ -69,7 +72,7 @@ export class MethodService implements OnInit {
       .toPromise();
   }
   deleDis(id:string):Promise<any> {
-    return this.http.get("/post_bar/discuss/deleteDiscuss",{params:new HttpParams().set("id",id)}).toPromise();
+    return this.http.get("/post_bar/discuss/deleteDiscuss?id="+id).toPromise();
   }
   ngOnInit() {
   }

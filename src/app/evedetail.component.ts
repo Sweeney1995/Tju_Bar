@@ -41,7 +41,6 @@ export class EvedetailComponent implements OnInit {
     this.title='evedetail';
     this.flag=false;
     this.flag2=false;
-    this.m.findAllPosting().then(data => { this.tieji = data['postthingList'];});
     this.aroute.paramMap.switchMap((params: ParamMap) =>  this.m.getPostbyid(+params.get('id')))
        .subscribe(data => {this.onepost=data;this.dis=this.onepost.discussList;this.dis=this.onepost.discussList;
        if(this.onepost.poUserId.toString(10) === sessionStorage.getItem('id')) {this.flag2=true;}});
