@@ -79,13 +79,10 @@
 
   <img src="../assets/img/fatie2.jpg" height="63" width="934"/>
   <div class="study2">
-    <input placeholder="请填写标题" class="study-input"/>
-    <input [(ngModel)]="tieName" placeholder="标题"><label>{{ tieName}}</label>
-    <input [(ngModel)]="tieThing"><label>{{ re }}</label>
+    <input  [(ngModel)]="tieName" placeholder="请填写标题" class="study-input"/>
   </div>
-
   <img src="../assets/img/fatie.jpg" height="59" width="898"/>
-  <textarea class="study1"></textarea>
+  <textarea [(ngModel)]="tieThing" class="study1"></textarea>
 
   <div>
     <button class="study3" (click)="onSelect()">发表</button> <button class="study5" (click)="addTie()">返回</button>

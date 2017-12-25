@@ -23,9 +23,6 @@ export class TestComponent implements OnInit {
   goBack() {
     this.loca.back();
   }
-  goto() {
-    this.rout.navigate(["/inde", "okkk"]);
-  }
   goDetail() {
     this.rout.navigate(['eve',"test"]);
   }
