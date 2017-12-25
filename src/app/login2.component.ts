@@ -8,7 +8,7 @@ import {MethodService} from "./method.service";
 @Component({
   selector:"app-log2",
   template:`
-    <div class="im"><img src="../assets/image/tju.jpeg" alt="" width="40%" height="30%"/><br></div>
+    <div class="im"><img src="../assets/image/tju.jpg" alt="" width="40%" height="30%"/><br></div>
     <div class="div">
     <h2>注册用户</h2>
     <br>
