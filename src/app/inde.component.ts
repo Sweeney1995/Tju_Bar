@@ -39,7 +39,7 @@ export class IndeComponent implements OnInit {
     if(sessionStorage.getItem('id')!=null) {
       this.bian="退出";
     } else {
-      this.bian="登陆";
+      this.bian="登录";
     }
   }
   goInfog() {
@@ -49,7 +49,7 @@ export class IndeComponent implements OnInit {
     this.M.routeServe.navigate(['login']);
   }
   ngOnInit() {
-    this.bian="登陆";
+    this.bian="登录";
     this.infom.userName="游客";
     this.id=sessionStorage.getItem('id');
     this.infom.userName=sessionStorage.getItem('userName');

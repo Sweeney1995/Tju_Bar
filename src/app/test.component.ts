@@ -3,7 +3,6 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 import { MethodService} from "./method.service";
-
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',

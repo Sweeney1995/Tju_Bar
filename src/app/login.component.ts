@@ -12,7 +12,7 @@ import {isNullOrUndefined} from "util";
       <h2>用户登录</h2><br>
       <label>用户名</label><input #userName (blur)="getName(userName.value)"><br>
       <label>密码</label><input #password type="password"  (blur)="getPassword(password.value)" ><br>
-      <button (click)="logI()" >登录</button>
+      <br><button (click)="logI()" >登录</button>
       <button (click)="goInde()" >游客访问</button>
       <button (click)="logIn2()" >注册</button>
     </div>`,
