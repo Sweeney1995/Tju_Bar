@@ -148,7 +148,22 @@ input {
   border-left: 2px solid #FFFFFF ;
   border-right: 2px solid white;
 }
-
+/*auth:zzy 2017/12/25 首页帖子列表显示样式 以及 模块 样式*/
+.marginleft{
+  margin-left: 20%;
+}
+#div1{
+  margin-top: 100px;
+}
+.list{
+  float: left;
+  width: 920px;
+  height: 100px;
+  border-top: 2px solid deepskyblue;
+  border-bottom: 2px solid deepskyblue;
+  border-left: 0px solid white ;
+  border-right: 0px solid white;
+}
 .span4{
   display: inline-block;
   font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
