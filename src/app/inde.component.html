@@ -100,20 +100,20 @@
 
 
    <div >
-     <div *ngFor="let post of tieji" class="list" >
-     <label class=""> {{post.poName}}</label>
-     <p >
+     <div *ngFor="let post of tieji" class="post" >
+     <label class="posttitle"> {{post.poName}}</label>
+     <p class="postcontent">
      {{post.poThing}}
      </p>
-     <label class="">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:"MM/dd/yy"}}</label>
+     <label class="postend">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:"MM/dd/yy"}}</label>
 
      </div>
-     <!--<div _ngcontent-c1="" class="list">-->
-       <!--<label _ngcontent-c1="" class=""> 帖子1</label>-->
-       <!--<p _ngcontent-c1="">-->
+     <!--<div _ngcontent-c1="" class="post">-->
+       <!--<label _ngcontent-c1="" class="posttitle"> 帖子1</label>-->
+       <!--<p _ngcontent-c1="" class="postcontent">-->
          <!--帖子1描述-->
        <!--</p >-->
-       <!--<label _ngcontent-c1="" class="">——发帖人：ceshi  发帖时间：1514134208000</label>-->
+       <!--<label _ngcontent-c1="" class="postend">——发帖人：ceshi  发帖时间：1514134208000</label>-->
 
      <!--</div>-->
 
