@@ -45,6 +45,9 @@ export class MethodService implements OnInit {
     this.tie={id:id,userPassword:userPassword};
     return this.http.post("/post_bar/user/updatePassword",JSON.stringify(this.tie),{headers:this.headers}).toPromise();
   }
+  findAllPosting():Promise<any> {
+    return this.http.get("/post_bar/postthing/findAllPostthing").toPromise();
+  }
   ngOnInit() {
   }
 }

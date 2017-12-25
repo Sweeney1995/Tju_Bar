@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-
 import {ActivatedRoute, ParamMap, Params, Router} from '@angular/router';
 import {MethodService} from "./method.service";
 import 'rxjs/add/operator/retry';
 import 'rxjs/add/operator/switchMap';
-import { Hero} from "./hero";
+import { Hero} from "./Class/Hero";
+import { Po } from "./Class/Po";
 import {Location} from "@angular/common";
 
 @Component({
@@ -20,7 +20,7 @@ export class IndeComponent implements OnInit {
   pw: string;
   bian: string;
   id:any;
-  tieji:object[];
+  tieji:Po[];
   constructor( private loac:Location, private M: MethodService, private acRoute:ActivatedRoute) {}
   onkey(value: string) {
     this.rec = value;
@@ -54,5 +54,6 @@ export class IndeComponent implements OnInit {
     this.id=sessionStorage.getItem('id');
     this.infom.userName=sessionStorage.getItem('userName');
     this.bianValue();
+    this.M.findAllPosting().then(data => { this.tieji = data['postthingList'];});
   }
 }
