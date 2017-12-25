@@ -78,8 +78,7 @@ export class PersoninfoComponent implements OnInit {
   ngOnInit() {
     this.tishi = '不一致';
     this.num = 0;
-    this.id=parseInt(sessionStorage.getItem('id'),10)
-
+    this.id=parseInt(sessionStorage.getItem('id'),10);
     this.flag = false;
     this.flag2=false;
   }

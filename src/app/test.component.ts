@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService} from './data.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import 'rxjs/add/operator/switchMap';
@@ -12,7 +11,7 @@ import { MethodService} from "./method.service";
 })
 export class TestComponent implements OnInit {
   re:number;
-  constructor(private serve: DataService, public aroute: ActivatedRoute,
+  constructor(private aroute: ActivatedRoute,
               public loca: Location, private rout:Router, private m:MethodService) {}
   name: string;
   flag: boolean;

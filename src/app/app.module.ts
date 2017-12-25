@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import { DataService } from './data.service';
 import {TestComponent} from './test.component';
 import { AppRoutingModule} from './app-routing.module';
 import { IndeComponent } from "./inde.component";
@@ -33,7 +32,7 @@ import {EvedetailComponent} from "./evedetail.component";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [DataService, MethodService],
+  providers: [MethodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

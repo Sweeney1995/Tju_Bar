@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { DataService } from './data.service';
+
 import {ActivatedRoute, ParamMap, Params, Router} from '@angular/router';
 import {MethodService} from "./method.service";
 import 'rxjs/add/operator/retry';
@@ -21,12 +21,13 @@ export class IndeComponent implements OnInit {
   bian: string;
   id:any;
   tieji:object[];
-  constructor(private serve: DataService, private loac:Location, private M: MethodService, private acRoute:ActivatedRoute) {}
+  constructor( private loac:Location, private M: MethodService, private acRoute:ActivatedRoute) {}
   onkey(value: string) {
     this.rec = value;
   }
-  go() {
-    this.M.goAddress('/info',this.infom.userName);
+  goInfo() {
+    if(this.infom['userName']!="游客")
+    this.M.routeTo('info');
   }
   goToTest() {
     this.M.routeServe.navigate(['/study', 1]);
@@ -35,7 +36,7 @@ export class IndeComponent implements OnInit {
     this.loac.back();
   }
   bianValue() {
-    if(this.infom.userName != "游客") {
+    if(sessionStorage.getItem('id')!=null) {
       this.bian="退出";
     } else {
       this.bian="登陆";

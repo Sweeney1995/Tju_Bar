@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'inde', component: IndeComponent },
   { path: 'login', component: LoginComponent },
   { path:'register',component: Login2Component},
-  { path: 'perinfog/:id',component: PersoninfoComponent},
-  {path:'info/:id', component: InfoComponent },
+  { path: 'perinfog',component: PersoninfoComponent},
+  {path:'info', component: InfoComponent },
   {path:'eve/:id', component: EvedetailComponent}
 ];
 
