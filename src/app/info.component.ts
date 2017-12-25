@@ -24,13 +24,20 @@ export class InfoComponent implements OnInit {
   title:string;
   heroes:Tie[];
   userPosts:Po[];
+  flag:boolean;
+  userId:number;
   constructor(private m:MethodService, private acroute:ActivatedRoute){}
-  go() {
-    this.m.goAddress('/perinfog','sss');
+  isShow(id:number) {
+    if(+sessionStorage.getItem('id')!==id) {
+      this.flag=false;
+    } else { this.flag=true; }
   }
   ngOnInit() {
     this.heroes=HEROES;
+    this.flag=true;
+    this.userId=(+sessionStorage.getItem('id'));
     this.title=sessionStorage.getItem('userName');
-    this.m.getUserPosts(+sessionStorage.getItem('id')).then(datas => this.userPosts =datas);
+    //this.m.getUserPosts(+sessionStorage.getItem('id')).then(datas => { this.userPosts =datas; alert(this.userPosts);});
+    this.m.findAllPosting().then(datas => this.userPosts=datas['postthingList']);
   }
 }
