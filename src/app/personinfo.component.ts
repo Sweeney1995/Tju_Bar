@@ -17,7 +17,7 @@ import {MethodService} from "./method.service";
       <label>原密码</label><input type="password" placeholder="请输入原密码" [(ngModel)]="oldpw"  (keyup)="tranT()"><br><br>
       <div *ngIf="flag">
       <label>新密码</label><input type="password" [(ngModel)]="newpw" minlength="6"  placeholder="必填,最少6位"><br>
-        <label>确认密码</label><input [(ngModel)]="cpw" type="password" (keyup)="tiShi()" placeholder="确认密码">
+        <label>确认密码</label><input [(ngModel)]="cpw" type="password" (keyup)="tiShi()" (keyup.enter)="ok()" placeholder="确认密码">
         <label *ngIf="flag2" class="ti">{{ tishi }}</label><br>
         <!--<div><label>邮箱</label><input type="text" maxlength="30" [(ngModel)]="info['userEmail']" placeholder="选填"><br>-->
       <!--<label>年级专业</label><input type="text" maxlength="15" [(ngModel)]="info['nj']" placeholder="选填"><br>-->

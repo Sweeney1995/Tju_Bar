@@ -16,6 +16,7 @@ import {Dis} from "./Class/Dis";
 )
 export class EvedetailComponent implements OnInit {
   title:string;
+  loginUserId:number;
   onepost:Po;
   flag:boolean;
   flag2:boolean;
@@ -42,6 +43,7 @@ export class EvedetailComponent implements OnInit {
     this.title='evedetail';
     this.flag=false;
     this.flag2=false;
+    this.loginUserId=parseInt(sessionStorage.getItem('id'));
     this.aroute.paramMap.switchMap((params: ParamMap) =>  this.m.getPostbyid(+params.get('id')))
        .subscribe(data => {this.onepost=data;this.dis=this.onepost.discussList;this.dis=this.onepost.discussList;
        if(this.onepost.poUserId.toString(10) === sessionStorage.getItem('id')) {this.flag2=true;}});

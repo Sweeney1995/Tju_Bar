@@ -24,7 +24,8 @@ export class TestComponent implements OnInit {
   onSelect() {
     if(sessionStorage.getItem('userName') !== "游客") {
     if(this.flag === false){
-      this.m.addTie(this.tieName,this.tieThing,+sessionStorage.getItem('id')).then(()=> alert("添加成功！"));
+      this.m.addTie(this.tieName,this.tieThing,+sessionStorage.getItem('id'))
+        .then(()=> {alert("发布成功！");});
       this.tieName=null;
       this.tieThing=null;
     }

@@ -24,6 +24,7 @@
   <ul>
     <li class="tou" (click)="goInfo()">{{userName}}</li>
     <li class="tou" *ngIf="userName!='游客'" (click)="goInfog()">修改信息</li>
+    <li (click)="onSelect()" *ngIf="userName!='游客'" class="tou"  >发帖</li>
     <li class="tou" (click)="goLogin()">{{bian}}</li></ul>
 </nav>
 <table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" (click)="goInde()"/></table>
@@ -35,8 +36,6 @@
       <label class="postend">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:'short'}}</label>
     </div>
   </div>
-  <br>
-  <button (click)="onSelect()" class="button"  >发帖</button>
 </div>
 
 
@@ -47,7 +46,7 @@
   </div>
 
   <textarea [(ngModel)]="tieThing" placeholder="请填写内容" class="study1"></textarea>
-  <div class="study33"><br><button class="study3" (click)="onSelect()" >发表</button>&nbsp;&nbsp;&nbsp; <button class="study5" (click)="back()">返回</button>
+  <div class="study33"><br><button class="study3" (click)="onSelect()" >确认</button>&nbsp;&nbsp;&nbsp; <button class="study5" (click)="back()">返回</button>
   </div>
 </div>
 

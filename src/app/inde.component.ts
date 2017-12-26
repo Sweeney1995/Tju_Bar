@@ -56,12 +56,16 @@ export class IndeComponent implements OnInit {
   delePost(poid:string) {
     this.M.deletePosting(poid);
   }
+  getPosts() {
+    if( this.id != null) { this.M.byDate(this.id).then(data => { this.tieji = data['postthingList'].slice(0,5);});
+    } else { this.M.byDate("17").then(data => { this.tieji = data['postthingList'].slice(0,5);});}
+  }
   ngOnInit() {
     this.bian="登录";
     this.infom.userName="游客";
     this.id=sessionStorage.getItem('id');
     this.infom.userName=sessionStorage.getItem('userName');
     this.bianValue();
-    this.M.byDate(this.id).then(data => { this.tieji = data['postthingList'].slice(0,5);});
+    this.getPosts();
   }
 }
