@@ -1,6 +1,6 @@
 <table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" /></table>
 <!--<div class="background">-->
-<div class="specific1" onload="ngOnInit()">
+<div class="specific1">
   <div>
     <div class="specific4"><strong><font color="#014b88">帖子主题:</font></strong></div>
     <div class="specific2">
@@ -19,8 +19,10 @@
     </div>
 
     <div class="specific4"><strong><font color="#014b88">帖子评论:</font></strong></div>
-    <div class="specific5" *ngFor="let i of this.dis" >{{ i.disUserName }}: &nbsp;&nbsp;{{ i.disThing }}&nbsp;&nbsp;时间：{{ i.disDate|date:'short' }}
-      <button *ngIf="flag2" (click)="deleDis(i.disId.toString())">删除</button>
+    <div class="specific5 paddingbottom-l " *ngFor="let i of this.dis" >{{ i.disUserName }}:
+      <div class="postcontent">&nbsp;&nbsp;{{ i.disThing }}&nbsp;&nbsp;</div>
+      <div class="postend ">时间：{{ i.disDate|date:'short' }}<button class="specific6" *ngIf="flag2" (click)="deleDis(i.disId.toString())">删除</button></div>
+
     </div>
     <!--<div class="specific5" *ngFor="let i of onepost.discussList" >{{ i.disThing }}-->
       <!--<button class="specific6" *ngIf="sessionStorage.getItem('id')===i.disUserId.toString(10)">删除</button>-->

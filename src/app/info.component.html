@@ -34,8 +34,8 @@
 <div class="person5">
 
   <div >
-    <ul class="heroes">
-      <li *ngFor="let post of this.userPosts" class="person9" >
+    <ul *ngFor="let post of this.userPosts" class="heroes">
+      <li  class="person9" *ngIf="userId === post.poUserId">
         <span class="badge" *ngIf="userId === post.poUserId" (click)="goDetailbyId(post.poId.toString())">{{ post.poName }}</span>
         <span *ngIf="userId === post.poUserId">{{ post.poThing }}</span>
         <span class="person10" *ngIf="userId === post.poUserId">{{ post.poDate|date:'short'}}</span>

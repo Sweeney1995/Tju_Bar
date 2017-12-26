@@ -20,12 +20,13 @@ export class TestComponent implements OnInit {
   userId: number;
   tieji:Po[];
   onSelect() {
+    if(sessionStorage.getItem('userName' !== '游客')){
     if(this.flag === false){
       this.m.addTie(this.tieName,this.tieThing,+sessionStorage.getItem('id')).then(()=> alert("添加成功！"));
       this.tieName=null;
       this.tieThing=null;
     }
-    this.flag=!this.flag;
+    this.flag=!this.flag;} else { alert("登录后才可以发帖~"); }
   }
   back() {
     this.flag=true;

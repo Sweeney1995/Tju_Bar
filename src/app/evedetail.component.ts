@@ -25,7 +25,8 @@ export class EvedetailComponent implements OnInit {
   dis:Dis[];
   constructor(private aroute:ActivatedRoute, private m:MethodService) {}
   onSelect() {
-    this.flag = !this.flag;
+    if(sessionStorage.getItem('userName') !== "游客") {
+    this.flag = !this.flag; } else { alert("登录才可以评论~"); }
   }
   addDis() {
     this.m.addDiss(this.disThing,this.onepost.poId,parseInt(sessionStorage.getItem('id')))

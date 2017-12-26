@@ -15,3 +15,33 @@
   right : 60%;
   z-index : 1;
 }
+.marginleft{
+  margin-left: 20%!important;
+}
+.nomargin{
+  margin: 0;
+}
+.post{
+  float: left;
+  width: 920px;
+  height: 100px;
+  border-top: 2px solid #014b88;
+  border-bottom: 0px solid deepskyblue;
+  border-left: 0px solid white ;
+  border-right: 0px solid white;
+}
+.postcontent{
+  height: 50px;
+}
+.postend{
+  float: right;
+}
+.posttitle{
+  display: inline-block;
+  font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
+  font-size: 18px;
+  color: #014b88;
+}
+.paddingbottom-l{
+  padding-bottom: 40px!important;
+}

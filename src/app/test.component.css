@@ -89,6 +89,9 @@
 .postend{
   float: right;
 }
+.nomargin{
+  margin: 0;
+}
 .posttitle{
   display: inline-block;
   font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
