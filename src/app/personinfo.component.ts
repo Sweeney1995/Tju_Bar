@@ -52,7 +52,7 @@ export class PersoninfoComponent implements OnInit {
   ok() {
     if (this.newpw === this.cpw && this.newpw.length > 5) {
       this.m.updatePassword(this.id,this.newpw).then(data => this.re = data)
-        .then(() => { if(this.re===1) {this.m.routeTo("inde");}})
+        .then(() => { if(this.re===1) {sessionStorage.setItem('userPassword',this.newpw);this.m.routeTo("inde");}})
         .catch(this.handleError);
     } else {
       if (this.newpw.length>5) {

@@ -62,6 +62,6 @@ export class IndeComponent implements OnInit {
     this.id=sessionStorage.getItem('id');
     this.infom.userName=sessionStorage.getItem('userName');
     this.bianValue();
-    this.M.findAllPosting().then(data => { this.tieji = data['postthingList'];});
+    this.M.byDate(this.id).then(data => { this.tieji = data['postthingList'].slice(0,5);});
   }
 }

@@ -1,5 +1,5 @@
 .div {
-  top: 20%;
+  top: 249px;
   left: 60%;
   right: 10%;
   position: absolute;
@@ -68,7 +68,7 @@ button:active {
   left:30%;
 }
 .mar{
-  margin-top: 20px;
+  margin-top: 100px;
   left: 10%;
   position: relative;
 }
