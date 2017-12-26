@@ -36,10 +36,10 @@
   <div >
     <ul class="heroes">
       <li *ngFor="let post of this.userPosts" class="person9" >
-        <span class="badge" *ngIf="userId === post.poUserId">{{ post.poName }}</span>
+        <span class="badge" *ngIf="userId === post.poUserId" (click)="goDetailbyId(post.poId.toString())">{{ post.poName }}</span>
         <span *ngIf="userId === post.poUserId">{{ post.poThing }}</span>
         <span class="person10" *ngIf="userId === post.poUserId">{{ post.poDate|date:'short'}}</span>
-        <button *ngIf="userId === post.poUserId">删除</button>
+        <button *ngIf="userId === post.poUserId" (click)="delePost(post.poId.toString())">删除</button>
       </li>
     </ul>
   </div>
