@@ -8,11 +8,12 @@ div.container nav ul li{
 
 nav ul li{
   text-decoration: none;
-  color: #5e5d5d;
+  color: white;
   font-family: "raleway-regular", arial;
   font-size: 14px;
   letter-spacing: .5px;
-
+  border-radius: 4px;
+  background-color: #014b88;
   transition:all .2s linear;
   -o-transition:all .2s linear;
   -moz-transition:all .2s linear;

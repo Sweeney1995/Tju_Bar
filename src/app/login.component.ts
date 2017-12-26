@@ -56,5 +56,6 @@ export class LoginComponent implements OnInit {
     sessionStorage.setItem('userName',"游客");
     this.idd="游客";
     sessionStorage.removeItem('id');
+    sessionStorage.removeItem('userPassword');
   }
 }

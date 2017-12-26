@@ -3,18 +3,18 @@
   width: 200px;
   height: 200px;
   position: absolute;
-  left: 500px;
-  top: 300px;
+  left: 700px;
+  top: 170px;
   border-radius: 3px;
 
 }
 .person2{
   position: absolute;
-  left: 800px;
-  top: 360px;
+  left: 40%;
+  top: 213px;
   font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
   font-size: 18px;
-  color: deepskyblue;
+  color: #014b88;
 }
 .person3{
   position:absolute;
@@ -34,45 +34,74 @@
 
 .person5{
   position: absolute;
-  top: 710px;
-  margin-left: 25%;
-  margin-right: 25%;
-  width: 920px;
-  height: 1000px;
+  top: 325px;
+  margin-left: 10%;
+  width: 1200px;
+  height: 800px;
   border: 1px solid lightslategrey;
+  border-color: #ffffff;
 
 
 }
 .person6{
+  left: 0%;
+  top: 140px;
+  height:40px;
   position: relative;
-  top: 650px;
-  left: 500px;
-  width: 920px;
-  height: 150px;
-  font-family: STHeiti, "Microsoft Yahei", "Microsoft YaHei", Arial, sans-serif;
-  font-size: 18px;
-  color: #005097;
+  float: left;
+  padding: 7px 14px;
+  font-size: 25px;
+  line-height: normal!important;
+  background: #FFFFFF;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.person66{
+  left: 20%;
+  top: 60px;
+  height:40px;
+  position: relative;
+  float: left;
+  padding: 7px 14px;
+  font-size: 25px;
+  line-height: normal!important;
+  background: #FFFFFF;
+  border-bottom-color: #2b71d9;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.delete{
+  background-color: #014b88;
+  border-radius: 5px;
+  left: 30%;
+  position: absolute;
+  width: 60px;
+  height: 30px;
 }
 .person7{
-
-  left: 800px;
-  top: 300px;
-  font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
-  font-size: 18px;
-
-  background: #222 url(../assets/img/td.jpg) repeat-x;
+  left: 75%;
+  top: 67px;
+  position: relative;
+  float: left;
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: normal!important;
+  color: #fff;
+  background: #014b88;
+  border-bottom-color: #2b71d9;
   display: inline-block;
-  padding: 5px 10px 6px;
-
+  border-radius: 5px;
+  border: 1px solid transparent;
   text-decoration: none;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-  border-bottom: 1px solid rgba(0,0,0,0.25);
-  position: absolute;
-  cursor: pointer
 }
 .img2{
   position:absolute;
@@ -82,23 +111,13 @@
   top:70px;
   cursor: pointer;
 }
-div h1.body input {
-  width: 400px;
-  height: 40px;
-  top:95px;
-  border: 1px solid blue;
-  position:absolute;
-
-  left:650px;
-
-}
 .button{
   display: inline-block;
   /*padding: 23px 63px;*/
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: #7b77c9;
+  background: #014b88;
   color: white;
   float:right;
   font-family: "Microsoft Yahei" ;
@@ -134,12 +153,15 @@ div h1.body input {
   font-size: small;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
-  background-color: deepskyblue;
+  background-color: #014b88;
   line-height: 1em;
   position: relative;
   left: -1px;
   top: -4px;
-  height: 1.8em;
+  overflow:hidden;
+  height: 2em;
+  width: 100px;
+  white-space:normal;
 
   border-radius: 4px 0 0 4px;
   margin: 0 15px 0 0 ;
@@ -149,14 +171,16 @@ div h1.body input {
   position: relative;
   left: 0;
   background-color: #EEE;
-  margin: 15px 20px 0 -6px;
+  margin: 0px 0px 0 0px;
   padding: .3em 0;
-  height: 1.6em;
+  height: 2.5em;
   border-radius: 4px;
   list-style: none;
-  top: 10px;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 .person10{
 
   float: right;
 }
+#wrap{white-space:normal; width:200px; }

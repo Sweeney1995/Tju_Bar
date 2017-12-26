@@ -51,16 +51,21 @@
   margin: 20px 0 20px 0;
   border-bottom: 2px solid #E0E0E0;
   padding-bottom:20px ;
+  color: #014b88;
 }
 .specific3{
   margin: 20px 0 20px 0;
   border-bottom: 2px solid #E0E0E0;
+  height: 40px;
+  line-height:0px;
+  word-wrap: break-word;
 }
 .specific4{
   vertical-align:middle;
   font-size: 20px;
   margin-bottom: 10px;
   border-bottom: 2px solid #E0E0E0;
+  word-wrap: break-word;
 }
 .specific5{
   margin-bottom: 20px;

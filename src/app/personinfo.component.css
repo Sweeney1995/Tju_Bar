@@ -51,6 +51,10 @@ button:hover {
   background-color: darkgrey;
   color: white;
 }
+input {
+  font-size: 15px;
+  height: 25px;
+}
 button:active {
   position: relative;
   top: 1px;
@@ -63,7 +67,8 @@ button:active {
 .pos{
   left:30%;
 }
-input {
-  font-size: 15px;
-  height: 25px;
+.mar{
+  margin-top: 20px;
+  left: 10%;
+  position: relative;
 }

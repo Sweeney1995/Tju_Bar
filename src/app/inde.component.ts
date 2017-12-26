@@ -27,10 +27,6 @@ export class IndeComponent implements OnInit {
   onkey(value: string) {
     this.rec = value;
   }
-  goInfo() {
-    if(this.infom['userName']!="游客")
-    this.M.routeTo('info');
-  }
   goStudy() {
     this.M.routeServe.navigate(['/study', 1]);
   }
@@ -43,6 +39,10 @@ export class IndeComponent implements OnInit {
     } else {
       this.bian="登录";
     }
+  }
+  goInfo() {
+    if(this.infom['userName']!="游客")
+      this.M.routeTo('info');
   }
   goInfog() {
     this.M.routeTo('perinfog');

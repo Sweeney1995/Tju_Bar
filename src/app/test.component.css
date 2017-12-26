@@ -82,6 +82,7 @@
   border-bottom: 0px solid deepskyblue;
   border-left: 0px solid white ;
   border-right: 0px solid white;
+  cursor: pointer;
 }
 .postcontent{
   height: 50px;
@@ -97,4 +98,31 @@
   font-family: STHeiti,"Microsoft Yahei","Microsoft YaHei",Arial,sans-serif;
   font-size: 18px;
   color: #014b88;
+}
+.tou{
+  text-decoration: none;
+  color: white;
+  font-family: "raleway-regular", arial;
+  font-size: 14px;
+  height: 24px;
+  width: 60px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 2px;
+  list-style: none;
+  transition:all .2s linear;
+  -o-transition:all .2s linear;
+  -moz-transition:all .2s linear;
+  -webkit-transition:all .2s linear;
+  cursor: pointer;
+  background-color: #014b88;
+  margin-bottom: 2px;
+}
+.tou:active{
+  position: relative;
+  top:1px;
+}
+.tou:hover {
+  color: #EEEEEE;
+  background-color: #5e5d5d;
 }

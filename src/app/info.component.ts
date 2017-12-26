@@ -27,7 +27,7 @@ export class InfoComponent implements OnInit {
   tieji: Po[];
   flag: boolean;
   userId: number;
-
+  userName:string;
   constructor(private m: MethodService, private acroute: ActivatedRoute) {
   }
 
@@ -45,9 +45,16 @@ export class InfoComponent implements OnInit {
   goDetailbyId(poid:string) {
     this.m.goAddress('eve',poid);
   }
+  goInde() {
+    this.m.routeTo('inde');
+  }
+  goPerinfog() {
+    this.m.routeTo('perinfog');
+  }
   ngOnInit() {
     this.heroes = HEROES;
     this.flag = true;
+    this.userName=sessionStorage.getItem('userName');
     this.userId = (+sessionStorage.getItem('id'));
     this.title = sessionStorage.getItem('userName');
     this.m.findAllPosting().then(datas => this.userPosts = datas['postthingList']);

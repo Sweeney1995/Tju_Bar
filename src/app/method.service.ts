@@ -74,6 +74,9 @@ export class MethodService implements OnInit {
   deleDis(id:string):Promise<any> {
     return this.http.get("/post_bar/discuss/deleteDiscuss?id="+id).toPromise();
   }
+  goInde() {
+    this.routeTo('inde');
+  }
   ngOnInit() {
   }
 }
