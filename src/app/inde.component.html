@@ -6,13 +6,13 @@
    </ul>
  </nav>
   <div id="searchinput" >
-    <img id="logo" src="../assets/tjulog.jpg" alt="timg2" class="img">
-    <input type="text" name="email" />
-    <button (click)="show()" type="submit" >全吧搜索</button>
+    <a href="http://www.tju.edu.cn/" target="_blank"><img id="logo" src="../assets/tjulog.jpg" alt="timg2" class="img"></a>
+    <input type="text" name="email" [(ngModel)]="this.inputValue" />
+    <button (click)="findPosts()" type="submit" >全吧搜索</button>
   </div>
  <div class="marginleft">
-   <div id="div1" >
-     <div id="div2">
+   <div id="div1">
+     <div id="div2" *ngIf="this.flag">
        <div class="box" style="background:url(../assets/img/xuexi.jpg); height:240px; width:240px;">
          <div class="footer">
            <div class="span1" (click)="goStudy()">学习</div>
@@ -36,7 +36,6 @@
           <div class="span1">影视</div>
         </div>
       </div>
-
       <div class="box" style="background:url(../assets/img/game.jpg); height:240px; width:240px;">
         <div class="footer">
           <div class="span1">游戏</div>
@@ -64,8 +63,8 @@
 
    <div >
      <div *ngFor="let post of tieji" class="post" (click)="goDetailbyId(post.poId.toString())">
-     <label class="posttitle" > {{post.poName}}</label>
-     <p class="postcontent">{{post.poThing}}</p>
+     <label class="posttitle" > 标题：{{post.poName}}</label>
+     <p class="postcontent">内容：{{post.poThing}}</p>
      <label class="postend">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:'short'}}</label>
      </div>
    </div>

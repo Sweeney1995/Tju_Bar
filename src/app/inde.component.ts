@@ -16,13 +16,13 @@ import {Dis} from "./Class/Dis";
 export class IndeComponent implements OnInit {
   name: string;
   rec = '';
-  getf: object[];
   infom: Hero=new Hero;
-  pw: string;
   bian: string;
   id:any;
   tieji:Po[];
   dis:Dis;
+  inputValue:string;
+  flag: boolean;
   constructor( private loac:Location, private M: MethodService, private acRoute:ActivatedRoute) {}
   onkey(value: string) {
     this.rec = value;
@@ -41,7 +41,7 @@ export class IndeComponent implements OnInit {
     }
   }
   goInfo() {
-    if(this.infom['userName']!="游客")
+    if(this.infom['userName'] !== "游客")
       this.M.routeTo('info');
   }
   goInfog() {
@@ -58,10 +58,19 @@ export class IndeComponent implements OnInit {
   }
   getPosts() {
     if( this.id != null) { this.M.byDate(this.id).then(data => { this.tieji = data['postthingList'].slice(0,5);});
-    } else { this.M.byDate("17").then(data => { this.tieji = data['postthingList'].slice(0,5);});}
+    } else { this.M.byDate('17').then(data => { this.tieji = data['postthingList'].slice(0,5);});}
+  }
+  findPosts() {
+    if(this.inputValue !== null) {
+    this.M.findByKey(this.inputValue,17).then(data => { this.tieji = data['postthingList'];
+    if(this.tieji.length === 0) {alert("不好意思，没找没有相关帖子 =。=");this.flag=true;
+    this.M.byDate('17').then(datas => { this.tieji = datas['postthingList'].slice(0,5);});} else { this.flag=false;}
+    });
+    } else { alert("请输入搜索关键字！");}
   }
   ngOnInit() {
     this.bian="登录";
+    this.flag=true;
     this.infom.userName="游客";
     this.id=sessionStorage.getItem('id');
     this.infom.userName=sessionStorage.getItem('userName');

@@ -162,6 +162,7 @@ input {
   border-bottom: 0px solid deepskyblue;
   border-left: 0px solid white ;
   border-right: 0px solid white;
+  cursor: pointer;
 }
 .postcontent{
   height: 50px;

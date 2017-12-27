@@ -9,7 +9,9 @@ import {MethodService} from "./method.service";
 @Component({
     selector: "app-perinfo",
     template: `
-      <table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" (click)="this.m.goInde()"></table>
+      <table align="center">
+        <img src="../assets/img/top.jpg" width="1026" height="121"  border="0" (click)="this.m.goInde()" style="cursor: pointer">
+      </table>
         <div class="im">
           <img src="../assets/img/xiugai.png" class="mar" alt="" width="40%" height="30%" (click)="goInde()"><br>
         </div><div class="div">

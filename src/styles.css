@@ -32,9 +32,11 @@
 }
 .postcontent{
   height: 50px;
+  color: black;
 }
 .postend{
   float: right;
+  color: black;
 }
 .posttitle{
   display: inline-block;

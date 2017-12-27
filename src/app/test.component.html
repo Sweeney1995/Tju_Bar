@@ -27,12 +27,12 @@
     <li (click)="onSelect()" *ngIf="userName!='游客'" class="tou"  >发帖</li>
     <li class="tou" (click)="goLogin()">{{bian}}</li></ul>
 </nav>
-<table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" (click)="goInde()"/></table>
+<table align="center"><img src="../assets/img/top.jpg" width="1026" height="121"  border="0" style="cursor: pointer" (click)="goInde()"/></table>
 <div *ngIf="flag" class="marginleft">
   <div >
     <div *ngFor="let post of tieji" class="post" (click)="goDetailbyId(post.poId.toString())">
-      <label class="posttitle" > {{post.poName}}</label>
-      <p class="postcontent nomargin">{{post.poThing}}</p>
+      <label class="posttitle" > 标题：{{post.poName}}</label>
+      <p class="postcontent nomargin">内容：{{post.poThing}}</p>
       <label class="postend">——发帖人：{{post.poUserName}}  发帖时间：{{post.poDate|date:'short'}}</label>
     </div>
   </div>

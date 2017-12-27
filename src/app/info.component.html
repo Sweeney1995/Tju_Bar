@@ -1,5 +1,5 @@
 <table align="center">
-  <img src="../assets/img/top.jpg" width="1026" height="121"  border="0" (click)="goInde()">
+  <img src="../assets/img/top.jpg" width="1026" height="121" border="0" style="cursor: pointer" (click)="goInde()">
 </table>
 <label class="person66"><strong><font color="#014b88" >用户名:&nbsp;&nbsp;&nbsp;{{ userName }}</font></strong></label>
   <button class="person7" (click)="goPerinfog()">编辑信息</button><label class="person6"><strong><font color="#014b88" >我的帖子</font></strong></label>
@@ -9,7 +9,7 @@
       <button *ngIf="userId === post.poUserId" (click)="delePost(post.poId.toString())" class="delete"><font color="#ffffff" >删除</font></button>
       <span class="person10" *ngIf="userId === post.poUserId">{{ post.poDate|date:'short'}}</span>
       <li  class="person9" *ngIf="userId === post.poUserId">
-        <span *ngIf="userId === post.poUserId" id="wrap">{{ post.poThing }}</span>
+        <span *ngIf="userId === post.poUserId" id="wrap" (click)="goDetailbyId(post.poId.toString())">{{ post.poThing }}</span>
       </li>
     </ul>
 </div>

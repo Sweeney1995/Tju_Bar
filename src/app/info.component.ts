@@ -5,6 +5,7 @@ import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/toPromise';
 import {Tie} from "./Class/Tie";
 import {Po} from "./Class/Po";
+import {Alert} from "selenium-webdriver";
 
 const HEROES: Tie[] = [
   {  tieba: '学习吧' , zhuti: '注会、中级、英语资料',shijian:'3分钟前' },
@@ -38,9 +39,9 @@ export class InfoComponent implements OnInit {
       this.flag = true;
     }
   }
-
   delePost(id: string) {
-    this.m.deletePosting(id);
+    this.m.deletePosting(id).then(() =>  {this.m.findAllPosting().then(datas => this.userPosts = datas['postthingList']);
+    alert("删除成功！");});
   }
   goDetailbyId(poid:string) {
     this.m.goAddress('eve',poid);

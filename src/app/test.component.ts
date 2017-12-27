@@ -25,7 +25,7 @@ export class TestComponent implements OnInit {
     if(sessionStorage.getItem('userName') !== "游客") {
     if(this.flag === false){
       this.m.addTie(this.tieName,this.tieThing,+sessionStorage.getItem('id'))
-        .then(()=> {alert("发布成功！");});
+        .then(()=> {alert("发布成功！");this.m.findAllPosting().then(data => { this.tieji = data['postthingList'];});});
       this.tieName=null;
       this.tieThing=null;
     }

@@ -14,7 +14,7 @@ export class MethodService implements OnInit {
   private add: string;
   public readeddata: any;
   tie: object;
-  rrr: string;
+  findObject: object;
   private headers = new HttpHeaders({'Content-Type': 'application/json'});
   getPostbyid(id: number): Promise<Po> {
     return this.findAllPosting().then(posts => posts['postthingList'].find(onepost => onepost['poId'] === id));
@@ -50,17 +50,18 @@ export class MethodService implements OnInit {
       .toPromise();
   }
   updatePassword(id:number,userPassword:string):Promise<any> {
-    this.tie={id:id,userPassword:userPassword};
+    this.tie= {id:id,userPassword:userPassword};
     return this.http.post("/post_bar/user/updatePassword",JSON.stringify(this.tie),{headers:this.headers}).toPromise();
   }
   findAllPosting():Promise<any> {
-    return this.http.get("/post_bar/postthing/findAllPostthing").toPromise();
+    return this.http.get("/post_bar/postthing/findAllPostthing").delay(100).toPromise();
   }
   deletePosting(id:string): Promise<any> {
     return this.http.get("/post_bar/postthing/deletePostthing",{params:new HttpParams().set("id",id)}).toPromise();
   }
   findByKey(keyWord:string,userId:number):Promise<any> {
-    return this.http.post("/post_bar/postthing/findByKey",JSON.stringify({keyWord:keyWord,userId:userId}),{headers:this.headers})
+    this.findObject={'keyWord':keyWord, 'userId': userId };
+    return this.http.post("/post_bar/postthing/findByKey",JSON.stringify(this.findObject),{headers:this.headers}).delay(300)
       .toPromise();
   }
   byDate(userId:string):Promise<any> {
